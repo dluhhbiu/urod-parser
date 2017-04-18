@@ -3,7 +3,6 @@ default: &default
   encoding: unicode
   host: localhost
   pool: 5
-  timeout: 5000
   database: urod-parser
 
 development:
