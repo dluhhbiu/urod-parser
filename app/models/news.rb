@@ -4,6 +4,6 @@ class News < ActiveRecord::Base
   after_create :remove_old_news
 
   def remove_old_news
-    News.all.order(:urod_id).last.destroy if News.count >= 100
+    News.all.order(:urod_id).first.destroy if News.count >= 100
   end
 end
