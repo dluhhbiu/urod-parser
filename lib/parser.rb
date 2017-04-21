@@ -3,13 +3,14 @@ module Parser
   class << self
     require 'nokogiri'
     require 'open-uri'
+    require 'open_uri_redirections'
     require 'net/http'
     require 'uri'
     URL = 'http://urod.ru'.freeze
     CHAT_ID = '@urodru'.freeze
 
     def parse
-      doc = Nokogiri::HTML(open(URL))
+      doc = Nokogiri::HTML(open(URL, allow_redirections: :all))
       doc.css('.BodyNewsStyle:has(.infoNews>a)').each do |item|
         save(item)
       end
