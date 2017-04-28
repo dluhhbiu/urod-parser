@@ -87,8 +87,8 @@ module Parser
       {
         action: 'sendMessage',
         data: {
-          text: "*#{news.title}*\n#{news.text}\n#{news.link}",
-          parse_mode: 'markdown'
+          text: "<b>#{news.title}</b>\n#{news.text}\n#{news.link}",
+          parse_mode: 'html'
         }
       }
     end
