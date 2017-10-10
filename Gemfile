@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.8'
-gem 'pg'
-gem 'jquery-rails'
-gem 'thin', group: :development
-gem 'quiet_assets'
-gem 'uglifier', '>= 1.3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'nokogiri'
 gem 'awesome_print'
+gem 'jquery-rails'
+gem 'nokogiri'
 gem 'open_uri_redirections'
+gem 'pg'
+gem 'quiet_assets'
+gem 'rails', '4.2.8'
+gem 'sass-rails', '~> 5.0'
+gem 'thin', group: :development
+gem 'uglifier', '>= 1.3.0'

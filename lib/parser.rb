@@ -51,7 +51,6 @@ module Parser
 
     def build_body(item)
       body = item.css('.NewsContent').first
-      body.search('div').remove
       if body.css('img').present?
         { format: 'img', text: body.css('img').first['src'] }
       elsif body.css('iframe').present?
